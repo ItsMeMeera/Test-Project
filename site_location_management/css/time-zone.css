@@ -1,0 +1,14 @@
+/**
+ * @file
+ * Styles for TimeZone Block.
+ */
+  .location-time-zone-block { 
+    font-family: ui-sans-serif;
+  }
+  .display-location {
+    font-size: 20px;
+  }
+  .display-time{
+
+    font-size: 30px;
+  }
