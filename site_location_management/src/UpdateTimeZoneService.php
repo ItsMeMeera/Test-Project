@@ -31,8 +31,10 @@ class UpdateTimeZoneService implements UpdateTimeZoneServiceInterface {
    */
   public function getCurrentTimezone($timezone) {
     try {
+      //$testdata = 1661990400;
       $customFormat = 'jS M Y - h:i A';
-      $currentTimeFormat = $this->dateFormatter->format(time(),'custom', $customFormat, $timezone );
+      $currentTimeFormat = $this->dateFormatter->format(time(), 'custom', $customFormat, $timezone);
+      $currentTimeFormat = str_replace('Sep', 'Sept', $currentTimeFormat);
       return $currentTimeFormat;
     } catch (\Exception $e) {
       \Drupal::logger('site_location_management')->error($e->getMessage());
