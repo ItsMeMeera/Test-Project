@@ -1,0 +1,5 @@
+site_location_management.location_settings_form:
+  title: 'Display Time Zone Settings'
+  description: 'Country and Time Zone settings page'
+  route_name: site_location_management.timezone_setting_form
+  parent: system.admin_config_system

@@ -1,0 +1,7 @@
+site_location_management.timezone_setting_form:
+  path: '/admin/config/system/country-timezone-settings'
+  defaults:
+    _title: 'Configure Country and Time Zone of user'
+    _form: 'Drupal\site_location_management\Form\CountryTimeZoneSettingForm'
+  requirements:
+    _permission: 'Administer TimeZone Setup Access'

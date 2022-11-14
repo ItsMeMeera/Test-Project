@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ * Module for implementing hook().
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_theme().
+ */
+function site_location_management_theme() {
+
+  return [
+    'time_zone_block_display' => [
+      'variables' => [
+        'location' => '',
+        'time' => '',
+      ],
+    ],
+  ];
+}

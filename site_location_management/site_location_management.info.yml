@@ -1,0 +1,6 @@
+name: Country Timezone Management
+type: module
+description: "Update Country and TimeZone for User"
+package: Custom
+core: 8.x
+core_version_requirement: ^8 || ^9

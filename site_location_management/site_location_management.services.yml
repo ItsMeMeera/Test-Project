@@ -1,0 +1,5 @@
+services:
+  site_location_management.update_timezone_service:
+    class: Drupal\site_location_management\UpdateTimeZoneService
+    arguments: 
+     - '@date.formatter'
