@@ -31,15 +31,11 @@ class UpdateTimeZoneService implements UpdateTimeZoneServiceInterface {
    */
   public function getCurrentTimezone($timezone) {
     try {
-      $customFormat = 'jS M Y - h:i:s';
-      //$month = str_replace('Sep', 'Sept', date('M'));
-      $currentTimeFormat = $this->dateFormatter->format(time(), 'custom', $customFormat, $timezone );
+      $customFormat = 'jS M Y - h:i A';
+      $currentTimeFormat = $this->dateFormatter->format(time(),'custom', $customFormat, $timezone );
       return $currentTimeFormat;
     } catch (\Exception $e) {
       \Drupal::logger('site_location_management')->error($e->getMessage());
-      return [
-        "exception" => 'Error Occured during processing ' . $e->getMessage()
-      ];
     }
   }
 }
