@@ -65,6 +65,7 @@ class DisplayBlock extends BlockBase implements ContainerFactoryPluginInterface 
         '#location' => $config->get('country'),
         '#time' => $time,        
     ];
+    $build['#attached']['library'][] = 'site_location_management/country_time_zone';
     $build['#cache']['max-age'] = 0;
     return $build;
   }
